@@ -1,0 +1,208 @@
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.sidebar.closed {
+  width: 60px;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 10px;
+  right: -15px;
+  background: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-toggle:hover {
+  background: #007bff;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.profile-card {
+  background: #e3f2fd;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.6s ease-in-out 1s both;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.role {
+  font-size: 14px;
+  color: #666;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 8px;
+  margin: 5px 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #007bff;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.menu li:hover {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu li.active {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.menu li.active::before {
+  transform: scaleY(1);
+}
+
+.menu li svg {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.menu li:hover svg {
+  transform: scale(1.1);
+}
+
+.sidebar.closed .menu li {
+  justify-content: center;
+  padding: 15px;
+  gap: 0;
+}
+
+.sidebar.closed .menu li svg {
+  font-size: 18px;
+}
+
+.progress-history {
+  background: #e3f2fd;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-history h4 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 16px;
+}
+
+.no-records p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.no-records small {
+  color: #999;
+  font-size: 12px;
+}
+
+.progress-notes {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.note-item {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.note-item p {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.note-item small {
+  color: #666;
+  font-size: 12px;
+}

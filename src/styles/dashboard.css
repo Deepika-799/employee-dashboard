@@ -1,0 +1,162 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.welcome-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+/* My Tasks Styles */
+.my-tasks {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.tasks-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.header-icon {
+  color: #4f46e5;
+  font-size: 24px;
+}
+
+.tasks-header h3 {
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.task-summary-cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+}
+
+.assigned-card {
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.5), rgba(253, 230, 138, 0.5));
+}
+
+.in-progress-card {
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.5), rgba(191, 219, 254, 0.5));
+}
+
+.completed-card {
+  background: linear-gradient(135deg, rgba(209, 250, 229, 0.5), rgba(167, 243, 208, 0.5));
+}
+
+.card-icon {
+  font-size: 20px;
+  color: #374151;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-count {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-dropdown {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  font-family: inherit;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.filter-dropdown:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.empty-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px;
+  background: #f9fafb;
+  border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 48px;
+  color: #9ca3af;
+}
+
+.empty-card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-summary-cards {
+    flex-direction: column;
+  }
+
+  .summary-card {
+    flex: none;
+  }
+
+  .my-tasks {
+    padding: 20px;
+  }
+}
